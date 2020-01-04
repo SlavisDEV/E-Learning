@@ -7,6 +7,9 @@
     <color name="textColor">#130E51</color>
     <color name="defaultBackground">#EEEEEE</color>
 
+    <color name="green_light">#4FDC89</color>
+    <color name="green_medium">#44C87B</color>
+
     <!-- bottom navigation -->
     <color name="bottom_navigation_active">#1AADA7FE</color>
 </resources>

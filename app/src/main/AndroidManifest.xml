@@ -3,6 +3,7 @@
     package="com.softroids.emptyproject">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".di.base.App"
@@ -13,8 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.learning.LearningActivity"></activity>
-        <activity android:name=".ui.main.MainActivity">
+        <activity android:name=".ui.learning.LearningActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/photoLearningFragment"
+        android:title="@string/photoLearningFragment_title" />
+    <item
+        android:id="@+id/videoLearningFragment"
+        android:title="@string/videoLearningFragment_title" />
+    <item
+        android:id="@+id/audioLearningFragment"
+        android:title="@string/audioLearningFragment_title" />
+</menu>

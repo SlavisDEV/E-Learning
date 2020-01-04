@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_navigation"
+    app:startDestination="@id/photoLearningFragment">
+
+    <fragment
+        android:id="@+id/audioLearningFragment"
+        android:name="com.softroids.emptyproject.ui.learning.audio.AudioLearningFragment"
+        android:label="fragment_audio_learning"
+        tools:layout="@layout/fragment_audio_learning" />
+    <fragment
+        android:id="@+id/photoLearningFragment"
+        android:name="com.softroids.emptyproject.ui.learning.photo.PhotoLearningFragment"
+        android:label="fragment_photo_learning"
+        tools:layout="@layout/fragment_photo_learning" />
+    <fragment
+        android:id="@+id/videoLearningFragment"
+        android:name="com.softroids.emptyproject.ui.learning.video.VideoLearningFragment"
+        android:label="fragment_video_learning"
+        tools:layout="@layout/fragment_video_learning" />
+</navigation>
