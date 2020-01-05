@@ -2,11 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/photoLearningFragment"
+        android:icon="@drawable/ic_image"
         android:title="@string/photoLearningFragment_title" />
     <item
         android:id="@+id/videoLearningFragment"
+        android:icon="@drawable/ic_video"
         android:title="@string/videoLearningFragment_title" />
     <item
         android:id="@+id/audioLearningFragment"
+        android:icon="@drawable/ic_audio"
         android:title="@string/audioLearningFragment_title" />
 </menu>

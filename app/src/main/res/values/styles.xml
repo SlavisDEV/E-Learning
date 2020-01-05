@@ -10,12 +10,13 @@
 
     <!-- BottomNavigation active item -->
     <style name="BottomNavigationActiveItem" parent="TextAppearance.MaterialComponents.Body1">
-        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/background_lighter</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="BottomNavigationInactiveItem" parent="TextAppearance.MaterialComponents.Body1">
-        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textColor">@color/background</item>
+
         <item name="android:textStyle">bold</item>
     </style>
 

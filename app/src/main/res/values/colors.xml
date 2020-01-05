@@ -7,8 +7,10 @@
     <color name="textColor">#130E51</color>
     <color name="defaultBackground">#EEEEEE</color>
 
-    <color name="green_light">#4FDC89</color>
-    <color name="green_medium">#44C87B</color>
+    <color name="background">#660099</color>
+    <color name="background_lighter">#9900FF</color>
+
+    <color name="black">#000000</color>
 
     <!-- bottom navigation -->
     <color name="bottom_navigation_active">#1AADA7FE</color>

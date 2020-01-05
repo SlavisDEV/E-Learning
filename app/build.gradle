@@ -89,4 +89,7 @@ dependencies {
 
     // rounded image view
     implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    // exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer:2.10.4'
 }

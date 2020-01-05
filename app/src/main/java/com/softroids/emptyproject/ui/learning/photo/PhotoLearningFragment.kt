@@ -62,5 +62,4 @@ class PhotoLearningFragment : Fragment(), PhotoLearningFragmentViewAccess {
             .into(imageView_additionalImage_2)
     }
 
-
 }

@@ -16,6 +16,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         tools:context=".ui.learning.LearningActivity">
 
         <fragment
@@ -35,9 +36,11 @@
             android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/defaultBackground"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
             app:elevation="0dp"
-            app:itemBackground="@drawable/nav_background"
+            app:itemBackground="@color/white"
+            app:itemIconTint="@drawable/nav_background"
             app:itemTextAppearanceActive="@style/BottomNavigationActiveItem"
             app:itemTextAppearanceInactive="@style/BottomNavigationInactiveItem"
             app:layout_constraintBottom_toBottomOf="parent"
