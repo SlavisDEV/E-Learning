@@ -6,6 +6,11 @@ import com.softroids.emptyproject.di.ui.learning.photo.PhotoLearningFragmentComp
 import com.softroids.emptyproject.di.ui.learning.photo.PhotoLearningFragmentModule
 import com.softroids.emptyproject.di.ui.learning.video.VideoLearningFragmentComponent
 import com.softroids.emptyproject.di.ui.learning.video.VideoLearningFragmentModule
+import com.softroids.emptyproject.di.ui.results.ResultsActivityComponent
+import com.softroids.emptyproject.di.ui.results.ResultsActivityModule
+import com.softroids.emptyproject.di.ui.test.TestActivityComponent
+import com.softroids.emptyproject.di.ui.test.TestActivityModule
+import com.softroids.emptyproject.ui.results.ResultsActivity
 import dagger.Component
 import javax.inject.Singleton
 
@@ -13,7 +18,8 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AppModule::class,
-        AppSettingsModule::class
+        AppSettingsModule::class,
+        QuizManagerModule::class
     ]
 )
 interface AppComponent {
@@ -25,4 +31,8 @@ interface AppComponent {
     fun plus(module: VideoLearningFragmentModule): VideoLearningFragmentComponent
 
     fun plus(module: AudioLearningFragmentModule): AudioLearningFragmentComponent
+
+    fun plus(module: TestActivityModule): TestActivityComponent
+
+    fun plus(module: ResultsActivityModule): ResultsActivityComponent
 }

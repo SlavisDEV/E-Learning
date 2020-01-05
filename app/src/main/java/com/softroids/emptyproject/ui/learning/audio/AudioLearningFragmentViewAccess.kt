@@ -10,4 +10,5 @@ interface AudioLearningFragmentViewAccess {
     fun hideVideoLoader(position: Int)
     fun hidePlayVideoButton(position: Int)
     fun showPlayVideoButton(position: Int)
+    fun openTest()
 }

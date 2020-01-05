@@ -3,4 +3,7 @@
     <string name="audioLearningFragment_title">Audio</string>
     <string name="videoLearningFragment_title">Video</string>
     <string name="photoLearningFragment_title">Photo</string>
+    <string name="leftQuestions">Pozostało pytań: %1$d</string>
+    <string name="quiz_finished">Nie ma więcej pytań. Sprawdź swoje wyniki!</string>
+    <string name="button_ok">Ok</string>
 </resources>

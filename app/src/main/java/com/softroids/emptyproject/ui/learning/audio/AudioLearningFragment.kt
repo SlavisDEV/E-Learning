@@ -1,6 +1,7 @@
 package com.softroids.emptyproject.ui.learning.audio
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,6 +14,8 @@ import com.softroids.emptyproject.R
 import com.softroids.emptyproject.databinding.FragmentAudioLearningBinding
 import com.softroids.emptyproject.di.base.App
 import com.softroids.emptyproject.di.ui.learning.audio.AudioLearningFragmentModule
+import com.softroids.emptyproject.di.ui.test.TestActivityModule
+import com.softroids.emptyproject.ui.test.TestActivity
 import kotlinx.android.synthetic.main.fragment_video_learning.*
 import javax.inject.Inject
 
@@ -89,6 +92,10 @@ class AudioLearningFragment : Fragment(), AudioLearningFragmentViewAccess {
     override fun onDetach() {
         super.onDetach()
         model.releasePlayer()
+    }
+
+    override fun openTest() {
+        startActivity(Intent(activity!!, TestActivity::class.java))
     }
 
 }

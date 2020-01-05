@@ -94,6 +94,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16sp"
                     android:layout_marginBottom="16sp"
+                    android:elevation="1dp"
                     android:text="On 3 March 1980, the stadium was named in honor of Giuseppe Meazza, the two-time World Cup winner (1934, 1938) who played for Inter and briefly for Milan in the 1920s, 1930s, and 1940s[3] and served two stints as Inter's manager. Because of Meazza's stronger connection with Inter, they commonly refer to the stadium by his name rather than San Siro, which is more used by Milan fans."
                     android:textColor="@color/white"
                     android:textSize="16sp" />
@@ -149,6 +150,18 @@
             </LinearLayout>
 
         </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_action_document"
+            app:backgroundTint="@color/background"
+            app:fabCustomSize="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="@{() -> viewAccess.openTest()}"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
