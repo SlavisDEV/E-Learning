@@ -43,7 +43,7 @@ class TestActivity : AppCompatActivity(), TestActivityViewAccess {
     }
 
     override fun initAnswers(answers: HashMap<Int, Pair<String, Boolean>>) {
-        answerAdapter = AnswerAdapter(answers, this) {
+        answerAdapter = AnswerAdapter(answers, this, null) {
             model.selectAnswer(it)
         }
         recyclerView_answers.apply {

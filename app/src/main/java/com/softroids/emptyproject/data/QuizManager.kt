@@ -4,7 +4,7 @@ import com.softroids.emptyproject.data.model.Question
 
 class QuizManager {
 
-    private val questions = listOf(
+    val questions = listOf(
         Question(
             "Who was AC Milan's captain in the 2003-04 season?",
             hashMapOf(
@@ -43,7 +43,7 @@ class QuizManager {
 
     private var currentQuestion = -1
 
-    private val results = hashMapOf<Int, ArrayList<Int>>()
+    val results = hashMapOf<Int, ArrayList<Int>>()
 
     fun getLeftQuestions() = questions.size - currentQuestion
 

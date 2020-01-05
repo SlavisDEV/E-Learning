@@ -11,6 +11,9 @@
     <color name="background_lighter">#9900FF</color>
 
     <color name="black">#000000</color>
+    <color name="green_darker">#8015AB49</color>
+    <color name="green">#4FDC89</color>
+    <color name="red">#DC0000</color>
 
     <!-- bottom navigation -->
     <color name="bottom_navigation_active">#1AADA7FE</color>

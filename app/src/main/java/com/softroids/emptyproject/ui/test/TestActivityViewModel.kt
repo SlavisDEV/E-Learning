@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import com.softroids.emptyproject.R
 import com.softroids.emptyproject.data.QuizManager
 import com.softroids.emptyproject.data.model.Question
+import com.softroids.emptyproject.settings.AppSettings
 import javax.inject.Inject
 
 class TestActivityViewModel @Inject constructor() {
@@ -18,6 +19,9 @@ class TestActivityViewModel @Inject constructor() {
 
     @Inject
     protected lateinit var context: Context
+
+    @Inject
+    protected lateinit var appSettings: AppSettings
 
     private var currentQuestion: Question? = null
 
@@ -36,6 +40,7 @@ class TestActivityViewModel @Inject constructor() {
             viewAccess.changeFloatActionIcon()
         }
         if (currentQuestion == null) {
+            appSettings.saveAnswers(quizManager.results)
             viewAccess.finishQuiz()
         } else {
             _question.value = currentQuestion!!.question

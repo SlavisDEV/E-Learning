@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.item_answer.view.*
 class AnswerAdapter(
     private val answers: HashMap<Int, Pair<String, Boolean>>,
     private val context: Context,
+    private val results: List<Int>?,
     private val onClicked: (Int) -> Unit
 ) : RecyclerView.Adapter<AnswerAdapter.ViewHolder>() {
 
@@ -31,27 +32,50 @@ class AnswerAdapter(
             this.answer.text = answer.first
             itemView.setOnClickListener {
                 onClicked(position)
-                if (!answers[position]!!.second) {
-                    indicator.setBackgroundColor(
-                        ContextCompat.getColor(
-                            context,
-                            R.color.background
+                if (results == null) {
+                    if (!answers[position]!!.second) {
+                        indicator.setBackgroundColor(
+                            ContextCompat.getColor(
+                                context,
+                                R.color.background
+                            )
                         )
-                    )
-                    answers.remove(position)
-                    answers[position] = Pair(answer.first, true)
-                }
-                else {
-                    indicator.setBackgroundColor(
-                        ContextCompat.getColor(
-                            context,
-                            R.color.background_lighter
+                        answers.remove(position)
+                        answers[position] = Pair(answer.first, true)
+                    } else {
+                        indicator.setBackgroundColor(
+                            ContextCompat.getColor(
+                                context,
+                                R.color.background_lighter
+                            )
                         )
-                    )
-                    answers.remove(position)
-                    answers[position] = Pair(answer.first, false)
+                        answers.remove(position)
+                        answers[position] = Pair(answer.first, false)
+                    }
                 }
             }
+            if (results != null) {
+                indicator.setBackgroundColor(
+                    ContextCompat.getColor(
+                        context,
+                        getColorForAnswer(answer.second, position)
+                    )
+                )
+            }
+        }
+    }
+
+    private fun getColorForAnswer(expectedAnswer: Boolean, position: Int): Int {
+        return if (!results!!.contains(position) && !expectedAnswer) {
+            R.color.background_lighter
+        } else if (results.contains(position) && expectedAnswer) {
+            R.color.green
+        } else if (results.contains(position) && !expectedAnswer) {
+            R.color.red
+        } else if (!results.contains(position) && expectedAnswer) {
+            R.color.green_darker
+        } else {
+            R.color.background_lighter
         }
     }
 
