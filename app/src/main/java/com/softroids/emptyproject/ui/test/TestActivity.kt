@@ -68,7 +68,10 @@ class TestActivity : AppCompatActivity(), TestActivityViewAccess {
     }
 
     private fun openResults() {
-        startActivity(Intent(this, ResultsActivity::class.java))
+        val intent = Intent(this, ResultsActivity::class.java).apply {
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        }
+        startActivity(intent)
     }
 
     override fun changeFloatActionIcon() {

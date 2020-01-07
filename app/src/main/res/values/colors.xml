@@ -7,12 +7,12 @@
     <color name="textColor">#130E51</color>
     <color name="defaultBackground">#EEEEEE</color>
 
-    <color name="background">#660099</color>
+    <color name="background">#B31AFF</color>
     <color name="background_lighter">#9900FF</color>
 
     <color name="black">#000000</color>
-    <color name="green_darker">#8015AB49</color>
-    <color name="green">#4FDC89</color>
+    <color name="green_darker">#007816</color>
+    <color name="green">#69F6A3</color>
     <color name="red">#DC0000</color>
 
     <!-- bottom navigation -->
